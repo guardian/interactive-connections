@@ -1,0 +1,52 @@
+@import "mq";
+@import "fonts";
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+.gv-main-col {
+
+    @media (min-width: map-get($mq-breakpoints, leftCol)) {
+		width: 620px;
+		margin-left: 160px;
+	}
+
+	@media (min-width: map-get($mq-breakpoints, wide)) {
+		width: 620px;
+		margin-left: 240px;
+	}
+}
+
+.gv-bt-person {
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.gv-bt-writeup {
+    display: inline-block;
+    max-width: 400px;
+    padding-left: 10px;
+}
+
+.gv-bt-mugshot {
+    vertical-align: top;
+    display: inline-block;
+    left:0px;
+    width:200px;
+    height:200px;
+    background: url('<%= path %>/assets/img/testsprite.jpg') 0 0;
+
+    &#p1 {
+ background: url('<%= path %>/assets/img/testsprite.jpg') 200px 0;
+    }
+
+}
+
